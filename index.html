@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101019">
+  <title>مافيا — اللعبة الجماعية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header><div class="logo">♠</div><div><h1>مافيا</h1><p>اللعبة الجماعية — باللهجة اللبنانية</p></div><span class="pill">لحدّ 20 لاعب</span></header>
+    <section id="entry" class="panel">
+      <h2>فوت عاللعبة</h2>
+      <label>اسمك باللعبة</label><input id="name" maxlength="18" placeholder="مثلاً: أبو علي" autocomplete="nickname">
+      <div class="actions">
+        <button id="create" class="primary">اعمل غرفة جديدة</button>
+      </div>
+      <div class="join"><label>أو فوت بكود غرفة</label><div class="inline"><input id="roomCode" maxlength="6" placeholder="ABC123" autocapitalize="characters"><button id="join">فوت</button></div></div>
+      <p id="entryMsg" class="msg"></p>
+      <p class="hint">بدكن 5 لاعبين عالأقل لتبلّشوا. صاحب الغرفة بيبعت الكود للكل.</p>
+    </section>
+    <section id="game" class="hidden">
+      <section class="panel roombar"><div><small>كود الغرفة</small><strong id="codeText">------</strong></div><button id="copy">انسخ الكود</button><div><small>المرحلة</small><strong id="phaseText">اللوبي</strong></div></section>
+      <section class="panel">
+        <div class="sectionTitle"><h2>اللاعبين</h2><span id="count" class="pill">0/20</span></div>
+        <div id="players" class="players"></div>
+        <p id="message" class="msg"></p>
+        <button id="start" class="primary hidden">بلّشوا اللعبة</button>
+      </section>
+      <section id="rolePanel" class="panel hidden">
+        <h2>دورك السرّي</h2><div id="roleCard" class="rolecard"></div>
+        <p id="privateMsg" class="msg"></p>
+        <div id="actionArea"></div>
+      </section>
+      <section class="panel rules">
+        <h3>كيف بتلعبوا؟</h3>
+        <p>🌙 بالليل، المافيا بتختار هدف، الدكتور بيحمي لاعب، والمحقق بيكشف إذا لاعب من المافيا.</p>
+        <p>☀️ بالنهار، ناقشوا وصوّتوا لشخص بتشكّوا فيه.</p>
+        <p>🏆 المواطنين بيربحوا إذا كشفوا كل المافيا؛ المافيا بتربح إذا صار عددها قدّ المواطنين أو أكتر.</p>
+      </section>
+    </section>
+    <footer>نسخة تجريبية — ما تسكّر الصفحة خلال اللعب.</footer>
+  </main>
+  <script src="/socket.io/socket.io.js"></script><script src="app.js"></script>
+</body></html>
