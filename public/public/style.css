@@ -1,0 +1,137 @@
+* {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+  background: linear-gradient(145deg, #101323, #281b35, #111827);
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+}
+
+.card {
+
+  width: 100%;
+
+  max-width: 440px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 22px;
+
+  padding: 26px 20px;
+
+  box-shadow: 0 20px 60px #0006;
+
+}
+
+h1 {
+
+  text-align: center;
+
+  color: #f87171;
+
+}
+
+p {
+
+  color: #d1d5db;
+
+  line-height: 1.7;
+
+}
+
+label {
+
+  display: block;
+
+  margin-top: 18px;
+
+  margin-bottom: 8px;
+
+}
+
+input {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid #55536a;
+
+  background: #181827;
+
+  color: white;
+
+  font-size: 16px;
+
+}
+
+button {
+
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 15px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: #dc2626;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+}
+
+button:active {
+
+  opacity: 0.8;
+
+}
+
+#message {
+
+  color: #fca5a5;
+
+}
+
+#players {
+
+  padding-right: 24px;
+
+  line-height: 2;
+
+}
+
+[hidden] {
+
+  display: none !important;
+
+}
